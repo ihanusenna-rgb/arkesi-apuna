@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arkesi Apuna</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="tyyli.css">
+</head>
+<body>
+  <div class="page">
+    <main class="card">
+
+      <!-- ===== HEADER / YLÄVALIKKO ===== -->
+      <header class="topbar">
+        <div class="brand">Arkesi Apuna</div>
+        <nav class="nav">
+          <a href="index.html">Etusivu</a>
+          <a href="#palvelut">Palvelut</a>
+          <a href="#yhteystiedot">Yhteystiedot</a>
+        </nav>
+      </header>
+
+      <!-- ===== HERO-OSIO ===== -->
+      <section class="hero">
+
+        <!-- Hero-kuva -->
+        <div class="hero-media">
+          <img src="kuvat/etusivu.png" alt="Avustaja ja asiakas keskustelemassa" class="hero-image">
+        </div>
+
+        <!-- Hero-otsikko -->
+        <h1>Yksilöllistä henkilökohtaista apua arjen eri tilanteisiin.</h1>
+
+        <!-- Ota yhteyttä -painike (CTA) -->
+        <button class="cta" id="otaYhteytta" type="button">Ota yhteyttä</button>
+      </section>
+
+      <!-- ===== PALVELUT-OSIO ===== -->
+      <div class="services" id="palvelut">
+        <a href="paivittainen-apu.html" class="service-card">Päivittäinen apu</a>
+        <a href="asiointiapu.html" class="service-card">Asiointiapu</a>
+        <a href="vapaa-aika.html" class="service-card">Vapaa-aika</a>
+      </div>
+
+      <!-- ===== YHTEYSTIEDOT ===== -->
+      <section class="contact" id="yhteystiedot">
+        <h2>Ota yhteyttä</h2>
+        <p>Voit soittaa meille, lähettää sähköpostia tai täyttää alla olevan yhteydenottopyynnön.</p>
+
+        <!-- Yrityksen yhteystiedot -->
+        <div class="contact-info">
+          <p><strong>Osoite:</strong> Esimerkkikatu 1, 00100 Helsinki</p>
+          <p><strong>Puhelin:</strong> 040 123 4567</p>
+          <p><strong>Sähköposti:</strong> info@arkesiapuna.fi</p>
+        </div>
+
+        <!-- YHTEYDENOTTOLOMAKE OTSIKKO -->
+        <h3>Lähetä viesti</h3>
+
+        <!-- YHTEYDENOTTOLOMAKE -->
+        <form id="contactForm" class="contact-form">
+
+          <!-- Nimi -->
+          <label for="name">Nimi</label>
+          <input type="text" id="name" name="name">
+
+          <!-- Sähköposti -->
+          <label for="email">Sähköposti</label>
+          <input type="email" id="email" name="email">
+
+          <!-- Viesti -->
+          <label for="message">Viesti</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+
+          <!-- Lähetä-painike -->
+          <button type="submit">Lähetä viesti</button>
+        </form>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Ota yhteyttä -painikkeen toiminnallisuus -->
+  <script>
+    const form = document.getElementById("contactForm");
+    const otaYhteytta = document.getElementById("otaYhteytta");
+
+    otaYhteytta.addEventListener("click", function () {
+      setTimeout(function () {
+        form.scrollIntoView({ behavior: "smooth", block: "start" });
+      }, 50);
+    });
+  </script>
+</body>
+</html>
