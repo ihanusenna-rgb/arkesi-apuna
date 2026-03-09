@@ -160,6 +160,7 @@ h1, h2, h3 {
     padding: 30px;
     background: var(--lightbg);
     border-radius: 16px;
+    color: var(--teal);
 }
 .contact h2 {
     font-family: "Montserrat", sans-serif;
@@ -246,7 +247,9 @@ h1, h2, h3 {
   padding: 16px 18px;
   border-radius: 12px;
   max-width: 900px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
 
 /* ===== RESPONSIIVISUUS ===== */
 
