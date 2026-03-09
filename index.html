@@ -25,12 +25,25 @@
       </header>
 
       <!-- ===== HERO-OSIO ===== -->
-      <section class="hero">
+<section class="hero"> <!-- Sivun yläosan esittelyosio -->
 
-        <!-- Hero-kuva -->
-        <div class="hero-media">
-          <img src="kuvat/etusivu.png" alt="Avustaja ja asiakas keskustelemassa" class="hero-image">
-        </div>
+  <!-- Hero-kuva -->
+  <div class="hero-media"> <!-- Hero-kuvan sisältävä lohko -->
+
+    <!-- Kuvan tiedostopolku kuvat-kansiossa -->
+    <!-- alt = vaihtoehtoinen teksti ruudunlukijoille -->
+    <!-- class = CSS-luokka, joka määrittää kuvan ulkoasun -->
+    <!-- loading="lazy" = kuva latautuu vasta kun se tulee näkyviin -->
+    <!-- width ja height = kuvan alkuperäiset mitat -->
+
+    <img src="kuvat/etusivu.jpg"
+         alt="Avustaja ja asiakas keskustelemassa"
+         class="hero-image"
+         loading="lazy"
+         width="1400"
+         height="933">
+
+  </div>
 
         <!-- Hero-otsikko -->
         <h1>Yksilöllistä henkilökohtaista apua arjen eri tilanteisiin.</h1>
