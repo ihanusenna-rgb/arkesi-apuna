@@ -69,6 +69,7 @@ h1, h2, h3 {
 /* ===== HERO ===== */
 .hero {
     text-align: left;
+    margin-bottom: 40px;
 }
 
 .hero h1 {
@@ -129,7 +130,7 @@ h1, h2, h3 {
 
 /* ===== PALVELUT ===== */
 .services {
-    margin-top: 32px;
+    margin-top: 48px;
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
@@ -225,7 +226,8 @@ h1, h2, h3 {
 /* ===== PALVELUN SISÄLTÖ ===== */
 .section-title {
   color: var(--yellow);
-  margin-top: 40px;
+  margin-top: 56px;
+  margin-bottom: 20px;
 }
 
 .service-grid {
@@ -244,7 +246,7 @@ h1, h2, h3 {
 
 .detail-card {
   background: var(--lightbg);
-  padding: 16px 18px;
+  padding: 24px 24px;
   border-radius: 12px;
   max-width: 900px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
