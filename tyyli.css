@@ -11,8 +11,19 @@
 }
 
 /* ===== PERUSASETUKSET ===== */
+/*
+Varmistaa, että elementtien leveys toimii oikein.
+Elementin leveys sisältää myös paddingin, jolloin
+elementit eivät veny liian leveiksi esim. mobiilissa.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
