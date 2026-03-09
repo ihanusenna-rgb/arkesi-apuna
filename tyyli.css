@@ -278,6 +278,24 @@ h1, h2, h3 {
 
 }
 
+/* ===== CTA LOPPUOSIO ===== */
+
+.cta-bottom {
+  margin-top: 50px;
+}
+
+.cta-bottom h2 {
+  color: var(--yellow);
+  margin-bottom: 10px;
+}
+
+.cta-bottom p {
+  color: var(--teal);
+  font-weight: 600;
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+
 /* tabletti */
 
 @media only screen and (min-width:431px) and (max-width:1199px) {
