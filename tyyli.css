@@ -1,7 +1,7 @@
 /* ===== VÄRIT & MITAT ===== */
 :root {
-  --yellow: rgb(204, 150, 82);
-  --beige: rgb(247, 243, 236);
+  --yellow: rgb(185,135,70);
+  --beige: rgb(255, 254, 252);
   --teal: rgb(47, 93, 98);
   --lightbg: rgb(231, 236, 233);
   --white: rgb(255, 255, 255);
@@ -448,3 +448,4 @@ h3 {
 .services {
   margin-top: 72px;
 }
+
