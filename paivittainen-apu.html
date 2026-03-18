@@ -19,16 +19,33 @@
     <main class="card">
 
       <!-- ===== YLÄVALIKKO ===== -->
-      <header class="topbar">
-        <div class="brand">Arkesi Apuna</div>
-        <nav class="nav">
-          <a href="index.html">Etusivu</a>
-          <a href="paivittainen-apu.html">Päivittäinen apu</a>
-          <a href="asiointiapu.html">Asiointiapu</a>
-          <a href="vapaa-aika.html">Vapaa-aika</a>
-          <a href="index.html#yhteystiedot">Yhteystiedot</a>
-        </nav>
-      </header>
+     <header class="topbar">
+
+  <a href="index.html" class="brand-wordmark stacked" aria-label="Arkesi Apuna etusivu">
+    <span>Arkesi</span>
+    <span>Apuna</span>
+  </a>
+
+  <button
+    class="menu-toggle"
+    id="menuToggle"
+    aria-label="Avaa valikko"
+    aria-expanded="false"
+    aria-controls="mainNav"
+    type="button"
+  >
+    ☰
+  </button>
+
+  <nav class="nav" id="mainNav">
+    <a href="index.html">Etusivu</a>
+    <a href="paivittainen-apu.html">Päivittäinen apu</a>
+    <a href="asiointiapu.html">Asiointiapu</a>
+    <a href="vapaa-aika.html">Vapaa-aika</a>
+    <a href="index.html#yhteystiedot">Yhteystiedot</a>
+  </nav>
+
+</header>
 
       <!-- ===== HERO ===== -->
 <section class="hero">
@@ -84,5 +101,41 @@
 
     </main>
   </div>
+  
+  <!-- HAMPPARI TOIMIVAKSI -->
+  <script>
+  const menuToggle = document.getElementById("menuToggle");
+  const mainNav = document.getElementById("mainNav");
+
+  if (menuToggle && mainNav) {
+    const navLinks = mainNav.querySelectorAll("a");
+
+    menuToggle.addEventListener("click", function () {
+      const isOpen = mainNav.classList.toggle("show");
+      menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      menuToggle.setAttribute("aria-label", isOpen ? "Sulje valikko" : "Avaa valikko");
+    });
+
+    navLinks.forEach(link => {
+      link.addEventListener("click", function () {
+        mainNav.classList.remove("show");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Avaa valikko");
+      });
+    });
+
+    document.addEventListener("click", function (event) {
+      const clickedInsideMenu = mainNav.contains(event.target);
+      const clickedToggle = menuToggle.contains(event.target);
+
+      if (!clickedInsideMenu && !clickedToggle) {
+        mainNav.classList.remove("show");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Avaa valikko");
+      }
+    });
+  }
+</script>
+
 </body>
 </html>
